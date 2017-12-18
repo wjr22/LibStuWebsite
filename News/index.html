@@ -1,9 +1,4 @@
-<?php
-if(!defined('InEmpireCMS'))
-{
-	exit();
-}
-?><!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -42,20 +37,7 @@ if(!defined('InEmpireCMS'))
 		   	</div>
 		</div>
 		<div class="newsIndexBox">
-			<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq(0,15,3,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-<a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
-<?php
-}
-}
-?>
-		</div>
+					</div>
 		
 	</div>
 </div>
@@ -119,3 +101,4 @@ $bqno++;
 </body>
 </html>
 
+此栏目暂无任何新增信息

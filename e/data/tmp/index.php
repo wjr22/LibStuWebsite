@@ -98,9 +98,9 @@ a {
       <p>sdfasfagawgawdsaf</p>
     </div>
     <div class="newsIndex"> 
-      <?php
+     <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq(0,10,3,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(3,5,0,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
