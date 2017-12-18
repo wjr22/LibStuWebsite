@@ -1,4 +1,15 @@
 /* CSS Document */
+.newsIndexBox a:link,
+    a:visited     {
+    color:brown;
+		font-size: 150%;
+		line-height: 20px;
+    }
+    a:hover,
+    a:active    {
+    color:bisque;
+    text-decoration:none;
+    }
 .bg{
 	width: 1178px;height: 1379px;margin-left: 35px;
 	background-image: url(.././images/news.png);
@@ -80,6 +91,7 @@ margin-left: 4px;
   height: 766px;
   z-index: 23;
 	float:left;
+	
 	margin-top: 20px;
 	margin-left: 12px;
 }
@@ -99,4 +111,11 @@ margin-left: 4px;
 	width:271px;
 	height: auto;
 	float: left;
+}
+.text{
+	width: auto;
+	height: auto;
+	left: 50px;
+	margin-left: 50px;
+	margin-top: 20px;
 }
