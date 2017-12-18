@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+
+.majorindex{
+	background-image: url(./../images/bg1.png);
+	margin-left: 35px;
+	margin-top: 0px;
+	height: 663px;
+	width:1178px;
+}
+.News{
+	background-image: url(../images/bg2.png);
+	margin-left: 35px;
+	height: 509px;
+	width:1178px;
+}
+.Diary{
+	background-image: url(./../images/bg3.png);
+	margin-left: 35px;
+	height: 509px;
+	width:1178px;
+}
+.Rules{
+	background-image: url(.././images/bg4.png);
+	margin-left: 35px;
+	height: 509px;
+	width:1178px;
+}
+.AboutUs{
+	background-image: url(.././images/bg5.png);
+	margin-left: 35px;
+	margin-top: 0px;
+	height: 509px;
+	width:1178px;
+}
+.version{
+	background-image: url(.././images/vers.png);
+	margin-left: 35px;
+	margin-top: 0px;
+	height: 139px;
+	width:1178px;
+}
+
+.index{
+	width:142px;
+	height:146px; 
+	float:left;
+	margin-left:122px;
+	margin-top:315px;
+	text-align: center;
+}
+.newsPicBox{
+	margin-left: 170px;
+	margin-top: 0px auto;
+	height:283px;
+	width:416px;
+	float:left;
+	text-align: center;
+}
+.newsIndex{
+	margin-top: 0px auto;
+	height:283px;
+	width:416px;
+	float:left;
+}
+.more{
+	margin-left:900px;
+	margin-top: 42px;
+	height:auto;
+	width: auto;
+	float:left;
+}
+#diaryPicBox{
+	margin-left: 392px;
+	margin-top: 10px;
+	float: left;
+	height:auto;
+	width:auto;
+}
+.rulesIndex{
+	margin-left: 185px;
+	margin-top: 60px;
+	float: left;
+	width: auto;
+	height: auto;
+	text-align: center;
+}
+.rulesMore{
+	margin-top: 20px auto;
+	width: auto;
+	height: auto;
+}
+.aboutTextBox{
+	width:1178px;
+	height: auto;
+	text-align: center;
+	text-emphasis-color: antiquewhite;
+	float:left;
+}
+.data2{width:100%; display:table; position:relative; overflow:hidden;}
+.data2 .pic2{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+.data2 .image_container a{
+	width:100%;height:100%; display:block;
+    float:left;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+}
+
+.data2 .image_container a .pic1{
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.data2 .image_container a:hover .pic1{
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+}
+
+.data2 .index .image_container a .pic2{
+    -webkit-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateY(-180deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;/*z-index:10;
+    position:absolute;*/
+}
+
+.data2 .image_container a:hover .pic2{
+    -webkit-transform:rotateX(0deg) rotateY(0deg);
+    -moz-transform:rotateX(0deg) rotate(0deg);
+    /*z-index: 10;
+    position: absolute;*/
+}
+
+.data2 .row{
+	 position:relative; z-index:10;}
+.data2 .row .pic1{width:100%;height:100%; overflow:hidden;}
+.data2 .row .pic2{width:100%;height:100%; overflow:hidden;}
+.data2 .row .pic2 img{/*position:absolute;*/}

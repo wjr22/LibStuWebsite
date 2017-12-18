@@ -1,0 +1,102 @@
+/* CSS Document */
+.bg{
+	width: 1178px;height: 1379px;margin-left: 35px;
+	background-image: url(.././images/news.png);
+	float: left;
+}
+.mynav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.mynav li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mynav a {
+  display: block;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+
+.target {
+  position: absolute;
+  border-bottom: 4px solid transparent;
+  z-index: -1;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.mynav a,
+.target {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+.indexBox{
+	width: 1178px;
+	height: auto;
+	background-color:#F97879;
+	font-family: 'Open Sans', Arial, sans-serif;
+	margin-top: 260px;margin-right: 35px; text-align: center;
+}
+.newsTextBoxRecom {
+  background-color: rgb( 255, 255, 255 );
+  opacity: 0.502;
+  width: 271px;
+  height: 312px;
+  z-index: 24;
+	text-align: left;
+	
+margin-left: 4px;
+	margin-top: 20px;
+}
+.newsHrefBox {
+  background-color: rgb( 255, 255, 255 );
+  opacity: 0.502;
+  left: 2px;
+  top: 793px;
+  width: 271px;
+  height: 439px;
+  z-index: 25;
+	margin-top: 12px;
+	margin-left: 4px;
+}
+.newsIndexBox{
+  background-color: rgb( 255, 255, 255 );
+  opacity: 0.502;
+  left: 278px;
+  top: 477px;
+  width: 895px;
+  height: 766px;
+  z-index: 23;
+	float:left;
+	margin-top: 20px;
+	margin-left: 12px;
+}
+.newsTextBox{
+	width: 1178px;
+	height: 768px;
+	margin-top: 16px;
+}
+.currenthtml{
+	width: 1178px;
+	height: auto;
+	background-color: rgb(255,255,255);
+	opacity: 0.502;
+	text-align: center;
+}
+.leftBox{
+	width:271px;
+	height: auto;
+	float: left;
+}
