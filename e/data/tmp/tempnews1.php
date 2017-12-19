@@ -29,10 +29,11 @@ if(!defined('InEmpireCMS'))
 	</div>
 	<div class="currenthtml">
 	 <font size="+1" color="#564747">
-		<b>当前位置： 缤纷活动>>></b>
+		<b>当前位置： 缤纷活动>>><?=$ecms_gr[title]?></b>
 		</font>
 	</div>
-	
+	<?=$ecms_gr[title]?>
+	<?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?>
 </div>
 <script>
 "use strict";
