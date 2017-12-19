@@ -50,7 +50,7 @@ while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
-<a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
+<div class="text"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br></div>
 <?php
 }
 }

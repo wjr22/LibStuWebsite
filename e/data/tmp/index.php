@@ -98,19 +98,10 @@ a {
       <p>sdfasfagawgawdsaf</p>
     </div>
     <div class="newsIndex"> 
-     <?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq(3,5,0,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-<a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
-<?php
-}
-}
-?>
+
+<p><a href>hello world</a></p>
+ <p><a href>hello world</a></p>
+
     </div>
   </div>
   </a> <a name="diary">

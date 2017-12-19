@@ -1,6 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
-
+a:link,
+    a:visited     {
+    color:aquamarine;
+    }
+    a:hover,
+    a:active    {
+    color:bisque;
+    text-decoration:none;
+    }
 .majorindex{
 	background-image: url(./../images/bg1.png);
 	margin-left: 35px;
@@ -62,6 +70,9 @@
 	height:283px;
 	width:416px;
 	float:left;
+	padding-left: 80px;
+	line-height: 20px;
+	font-size:190%;
 }
 .more{
 	margin-left:900px;
