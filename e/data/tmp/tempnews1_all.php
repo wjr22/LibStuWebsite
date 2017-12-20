@@ -34,7 +34,8 @@ if(!defined('InEmpireCMS'))
 	</div>
   <div class="contentStyle">
 	<div class="titleStyle"><?=$ecms_gr[title]?><br><?=$ecms_gr[username]?><br><?=date('Y-m-d',$bqr[newstime])?><br><?=$ecms_gr[keyboard]?></div>
-	<div class="newstextStyle"><?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?>[!--page.url--]</div>
+	<div class="newstextStyle"><?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?></div>
+  <div class="newstextStyle pageurl" >[!--page.url--]</div>
 </div>
 </div>
 <script>
