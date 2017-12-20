@@ -97,8 +97,8 @@ a {
       <p>abcdefghigkl</p>
       <p>sdfasfagawgawdsaf</p>
     </div>
-    <div class="newsIndex"> 
-      <?php
+    <div class="newsIndex">
+     <?php
 $bqno=0;
 $ecms_bq_sql=sys_ReturnEcmsLoopBq(0,7,3,0);
 if($ecms_bq_sql){
@@ -106,7 +106,7 @@ while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
-          <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
+            <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
        <?php
 }
 }

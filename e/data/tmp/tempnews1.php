@@ -18,22 +18,24 @@ if(!defined('InEmpireCMS'))
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
-		    	<li><a href="../index.html"><font color="#EBE9E9">首页</font></a></li>
-		    	<li><a href="../News/index.html"><font color="#EBE9E9">缤纷活动</font></a></li>
-		    	<li><a href="../html/diary.html"><font color="#EBE9E9">馆员日志</font></a></li>
-		    	<li><a href="../html/ruler.html"><font color="#EBE9E9">规章制度</font></a></li>
-		    	<li><a href="../html/aboutus.html"><font color="#EBE9E9">关于我们</font></a></li>
+		    	<li><a href="../../index.html"><font color="#EBE9E9">首页</font></a></li>
+		    	<li><a href="../index.html"><font color="#EBE9E9">缤纷活动</font></a></li>
+		    	<li><a href="../../html/diary.html"><font color="#EBE9E9">馆员日志</font></a></li>
+		    	<li><a href="../../html/ruler.html"><font color="#EBE9E9">规章制度</font></a></li>
+		    	<li><a href="../../html/aboutus.html"><font color="#EBE9E9">关于我们</font></a></li>
 		  </ul>
 		</nav>
 		<span class="target"></span>
 	</div>
-	<div class="currenthtml">
+	<div class="currenthtml contentpage">
 	 <font size="+1" color="#564747">
-		<b>当前位置： 缤纷活动>>><?=$ecms_gr[title]?></b>
+		<b><?=$grurl?><?=$ecms_gr[title]?></b>
 		</font>
 	</div>
-	<?=$ecms_gr[title]?>
-	<?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?>
+  <div class="contentStyle">
+	<div class="titleStyle"><?=$ecms_gr[title]?><br><?=$ecms_gr[username]?><br><?=date('Y-m-d',$bqr[newstime])?><br><?=$ecms_gr[keyboard]?></div>
+	<div class="newstextStyle"><?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?>[!--page.url--]</div>
+</div>
 </div>
 <script>
 "use strict";

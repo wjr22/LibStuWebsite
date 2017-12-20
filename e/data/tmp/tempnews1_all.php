@@ -27,13 +27,15 @@ if(!defined('InEmpireCMS'))
 		</nav>
 		<span class="target"></span>
 	</div>
-	<div class="currenthtml">
+	<div class="currenthtml contentpage">
 	 <font size="+1" color="#564747">
-		<b>当前位置： 缤纷活动>>><?=$grurl?></b>
+		<b><?=$grurl?><?=$ecms_gr[title]?></b>
 		</font>
 	</div>
-	<div class="titleStyle"><?=$ecms_gr[title]?><br><?=$ecms_gr[username]?><br><?=$ecms_gr[keyboard]?></div>
-	<div class="newstextStyle"><?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?></div>
+  <div class="contentStyle">
+	<div class="titleStyle"><?=$ecms_gr[title]?><br><?=$ecms_gr[username]?><br><?=date('Y-m-d',$bqr[newstime])?><br><?=$ecms_gr[keyboard]?></div>
+	<div class="newstextStyle"><?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?>[!--page.url--]</div>
+</div>
 </div>
 <script>
 "use strict";

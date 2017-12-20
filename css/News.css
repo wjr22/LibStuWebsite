@@ -119,3 +119,25 @@ margin-left: 4px;
 	margin-left: 50px;
 	margin-top: 20px;
 }
+.currenthtml.contentpage{
+  width: auto;
+  height: auto;
+  background-color: rgb(255,255,255);
+  opacity: 0.502;
+  padding-left: 150px;
+  text-align: left;
+}
+.contentStyle{
+  width: auto;
+  height: auto;
+  background-color: rgb(255,255,255);
+  opacity: 0.502;
+}
+.contentStyle .titleStyle{
+  text-align: center;
+  text-overflow: auto;
+}
+.contentStyle .newstextStyle{
+  padding-left: 50px;
+  padding-right: 50px;
+}
