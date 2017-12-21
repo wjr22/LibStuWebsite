@@ -11,8 +11,8 @@
     text-decoration:none;
     }
 .bg{
-	width: 1178px;height: 1379px;margin-left: 35px;
-	background-image: url(.././images/news.png);
+	width: 1178px;height: 1379px;
+	background-image: url(../images/news.png);
 	float: left;
 }
 .mynav ul {
@@ -136,11 +136,13 @@ margin-left: 4px;
 .contentStyle .titleStyle{
   text-align: center;
   text-overflow: auto;
+  font-size: 18px;
+  font-weight: bold;
+
 }
 .contentStyle .newstextStyle{
   padding-left: 50px;
   padding-right: 50px;
-}
-.contentStyle .newstextStyle.pageurl{
-  text-align: center;
+  font-family: sans-serif;
+  background-image:url(../images/news_content_background.png);
 }

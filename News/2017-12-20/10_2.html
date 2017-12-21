@@ -2,14 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="../../css/News.css" rel="stylesheet">
+<link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
 <title>无标题文档</title>
 <style>
 	body {  background-color: #333333;};
 </style>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 </head>
-<body>
-<div class="bg">
+<body onload="getWidthValue()">
+<div id="margin" >
+<div class="bg_head">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
@@ -28,8 +36,12 @@
 		</font>
 	</div>
   <div class="contentStyle">
-	<div class="titleStyle">标准多段落文本测试-2<br>wjr<br>1970-01-01<br>多段落,单页,文本测试</div>
-	<div class="newstextStyle"></div>
+	   <div class="titleStyle">
+         标准多段落文本测试-2<br>wjr<br>多段落,单页,文本测试     </div>
+  </div>
+</div>
+<div class="bg_body">
+      <div class="newstextStyle"></div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">当我们行动时，我们必须保证向前进。我们不能倒退。现在有人问热心民权运动的人，&ldquo;你们什么时候才能满足？&rdquo;</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">只要黑人仍然遭受警察难以形容的野蛮迫害，我们就绝不会满足。</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">只要我们在外奔波而疲乏的身躯不能在公路旁的汽车旅馆和城里的旅馆找到住宿之所，我们就绝不会满足。</div>
@@ -43,12 +55,11 @@
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">我梦想有一天，这个国家会站立起来，真正实现其信条的真谛：&ldquo;我们认为真理是不言而喻，人人生而平等。&rdquo;</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">我梦想有一天，在佐治亚的红山上，昔日奴隶的儿子将能够和昔日奴隶主的儿子坐在一起，共叙兄弟情谊。</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">我梦想有一天，甚至连密西西比州这个正义匿迹，压迫成风，如同沙漠般的地方，也将变成自由和正义的绿洲。</div>
-  <div class="newstextStyle pageurl" ><a title="Page">&nbsp;<b>2</b>/<b>4</b> </a>&nbsp;&nbsp;<a href="/News/2017-12-20/10.html">首页</a>&nbsp;<a href="/News/2017-12-20/10.html">上一页</a>&nbsp;<a href="/News/2017-12-20/10.html">1</a>&nbsp;<b>2</b>&nbsp;<a href="/News/2017-12-20/10_3.html">3</a>&nbsp;<a href="/News/2017-12-20/10_4.html">4</a>&nbsp;<a href="/News/2017-12-20/10_3.html">下一页</a>&nbsp;<a href="/News/2017-12-20/10_4.html">尾页</a></div>
-</div>
+    </div>
+<div class="pageEnd"></div>
 </div>
 <script>
 "use strict";
-
 (function () {
 
   var target = document.querySelector(".target");
@@ -99,6 +110,8 @@
   }
 
   window.addEventListener("resize", resizeFunc);
+  
 })();</script>
+
 </body>
 </html>

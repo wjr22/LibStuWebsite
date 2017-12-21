@@ -8,8 +8,15 @@
 	body {  background-color: #333333;};
 </style>
 </head>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 <body>
-<div class="bg">
+<div class="bg" onload="getWidthValue()">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>

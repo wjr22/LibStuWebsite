@@ -2,14 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="../../css/News.css" rel="stylesheet">
+<link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
 <title>无标题文档</title>
 <style>
 	body {  background-color: #333333;};
 </style>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 </head>
-<body>
-<div class="bg">
+<body onload="getWidthValue()">
+<div id="margin" >
+<div class="bg_head">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
@@ -28,8 +36,12 @@
 		</font>
 	</div>
   <div class="contentStyle">
-	<div class="titleStyle">标准含图文本测试<br>wjr<br>1970-01-01<br>图片,测试,时间修复测试</div>
-	<div class="newstextStyle"><p style="text-align: center;"><img src="/d/file/News/2017-12-20/aedb3c289bd104cfed4dae00dad0357a.jpg" alt="马丁&middot;路德&middot;金.jpg" width="220" height="137" />&nbsp;</p>
+	   <div class="titleStyle">
+         标准含图文本测试<br>wjr<br>图片,测试,时间修复测试     </div>
+  </div>
+</div>
+<div class="bg_body">
+      <div class="newstextStyle"><p style="text-align: center;"><img src="/d/file/News/2017-12-20/aedb3c289bd104cfed4dae00dad0357a.jpg" alt="马丁&middot;路德&middot;金.jpg" width="220" height="137" />&nbsp;</p>
 <p><span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 2em;">I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.</span></p>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">Five score years ago, a great American, in whose symbolic shadow we stand today, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of bad captivity.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">But one hundred years later, the Negro still is not free. One hundred years later, the life of the Negro is still sadly crippled by the manacles of segregation and the chains of discrimination. One hundred years later, the Negro lives on a lonely island of poverty in the midst of a vast ocean of material prosperity. One hundred years later, the Negro is still languished in the corners of American society and finds himself an exile in his own land. And so we've come here today to dramatize a shameful condition.</div>
@@ -38,12 +50,11 @@
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">We have also come to this hallowed spot to remind America of the fierce urgency of Now. This is no time to engage in the luxury of cooling off or to take the tranquilizing drug of gradualism. Now is the time to make real the promises of democracy. Now is the time to rise from the dark and desolate valley of segregation to the sunlit path of racial justice. Now is the time to lift our nation from the quicksands of racial injustice to the solid rock of brotherhood. Now is the time to make justice a reality for all of God's children.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">It would be fatal for the nation to overlook the urgency of the moment. This sweltering summer of the Negro's legitimate discontent will not pass until there is an invigorating autumn of freedom and equality. Nineteen sixty-three is not an end, but a beginning. And those who hope that the Negro needed to blow off steam and will now be content will have a rude awakening if the nation returns to business as usual. And there will be neither rest nor tranquility in America until the Negro is granted his citizenship rights. The whirlwinds of revolt will continue to shake the foundations of our nation until the bright day of justice emerges.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">But there is something that I must say to my people, who stand on the warm threshold which leads into the palace of justice: In the process of gaining our rightful place, we must not be guilty of wrongful deeds. Let us not seek to satisfy our thirst for freedom by drinking from the cup of bitterness and hatred. We must forever conduct our struggle on the high plane of dignity and discipline. We must not allow our creative protest to degenerate into physical violence. Again and again, we must rise to the majestic heights of meeting physical force with soul force.</div>
-  <div class="newstextStyle pageurl" ><a title="Page">&nbsp;<b>1</b>/<b>4</b> </a>&nbsp;&nbsp;&nbsp;<b>1</b>&nbsp;<a href="/News/2017-12-20/12_2.html">2</a>&nbsp;<a href="/News/2017-12-20/12_3.html">3</a>&nbsp;<a href="/News/2017-12-20/12_4.html">4</a>&nbsp;<a href="/News/2017-12-20/12_2.html">下一页</a>&nbsp;<a href="/News/2017-12-20/12_4.html">尾页</a></div>
-</div>
+    </div>
+<div class="pageEnd"></div>
 </div>
 <script>
 "use strict";
-
 (function () {
 
   var target = document.querySelector(".target");
@@ -94,6 +105,8 @@
   }
 
   window.addEventListener("resize", resizeFunc);
+  
 })();</script>
+
 </body>
 </html>

@@ -7,14 +7,22 @@ if(!defined('InEmpireCMS'))
 <html>
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="../../css/News.css" rel="stylesheet">
+<link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
 <title>无标题文档</title>
 <style>
 	body {  background-color: #333333;};
 </style>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 </head>
-<body>
-<div class="bg">
+<body onload="getWidthValue()">
+<div id="margin" >
+<div class="bg_head">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
@@ -33,14 +41,18 @@ if(!defined('InEmpireCMS'))
 		</font>
 	</div>
   <div class="contentStyle">
-	<div class="titleStyle"><?=$ecms_gr[title]?><br><?=$ecms_gr[username]?><br><?=date('Y-m-d',$bqr[newstime])?><br><?=$ecms_gr[keyboard]?></div>
-	<div class="newstextStyle"><?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?></div>
-  <div class="newstextStyle pageurl" >[!--page.url--]</div>
+	   <div class="titleStyle">
+         <?=$ecms_gr[title]?><br><?=$ecms_gr[username]?><br><?=$ecms_gr[keyboard]?>
+     </div>
+  </div>
 </div>
+<div class="bg_body">
+      <div class="newstextStyle"><?=strstr($ecms_gr[newstext],'[!--empirenews.page--]')?'[!--newstext--]':$ecms_gr[newstext]?></div>
+    </div>
+<div class="pageEnd"></div>
 </div>
 <script>
 "use strict";
-
 (function () {
 
   var target = document.querySelector(".target");
@@ -91,6 +103,8 @@ if(!defined('InEmpireCMS'))
   }
 
   window.addEventListener("resize", resizeFunc);
+  
 })();</script>
+
 </body>
 </html>

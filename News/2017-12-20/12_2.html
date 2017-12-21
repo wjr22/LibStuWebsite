@@ -2,14 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="../../css/News.css" rel="stylesheet">
+<link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
 <title>无标题文档</title>
 <style>
 	body {  background-color: #333333;};
 </style>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 </head>
-<body>
-<div class="bg">
+<body onload="getWidthValue()">
+<div id="margin" >
+<div class="bg_head">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
@@ -28,8 +36,12 @@
 		</font>
 	</div>
   <div class="contentStyle">
-	<div class="titleStyle">标准含图文本测试<br>wjr<br>1970-01-01<br>图片,测试,时间修复测试</div>
-	<div class="newstextStyle"></div>
+	   <div class="titleStyle">
+         标准含图文本测试<br>wjr<br>图片,测试,时间修复测试     </div>
+  </div>
+</div>
+<div class="bg_body">
+      <div class="newstextStyle"></div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">The marvelous new militancy which has engulfed the Negro community must not lead us to a distrust of all white people, for many of our white brothers, as evidenced by their presence here today, have come to realize that their destiny is tied up with our destiny. And they have come to realize that their freedom is inextricably bound to our freedom.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">We cannot walk alone.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">And as we walk, we must make the pledge that we shall always march ahead.</div>
@@ -41,12 +53,11 @@
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">I have a dream that one day this nation will rise up and live out the true meaning of its creed: &quot;We hold these truths to be self-evident, that all men are created equal.&quot;</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">I have a dream that one day on the red hills of Georgia, the sons of former slaves and the sons of former slave owners will be able to sit down together at the table of brotherhood.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">I have a dream that one day even the state of Mississippi, a state sweltering with the heat of injustice, sweltering with the heat of oppression, will be transformed into an oasis of freedom and justice.</div>
-  <div class="newstextStyle pageurl" ><a title="Page">&nbsp;<b>2</b>/<b>4</b> </a>&nbsp;&nbsp;<a href="/News/2017-12-20/12.html">首页</a>&nbsp;<a href="/News/2017-12-20/12.html">上一页</a>&nbsp;<a href="/News/2017-12-20/12.html">1</a>&nbsp;<b>2</b>&nbsp;<a href="/News/2017-12-20/12_3.html">3</a>&nbsp;<a href="/News/2017-12-20/12_4.html">4</a>&nbsp;<a href="/News/2017-12-20/12_3.html">下一页</a>&nbsp;<a href="/News/2017-12-20/12_4.html">尾页</a></div>
-</div>
+    </div>
+<div class="pageEnd"></div>
 </div>
 <script>
 "use strict";
-
 (function () {
 
   var target = document.querySelector(".target");
@@ -97,6 +108,8 @@
   }
 
   window.addEventListener("resize", resizeFunc);
+  
 })();</script>
+
 </body>
 </html>

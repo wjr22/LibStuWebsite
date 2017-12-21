@@ -2,14 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="../../css/News.css" rel="stylesheet">
+<link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
 <title>无标题文档</title>
 <style>
 	body {  background-color: #333333;};
 </style>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 </head>
-<body>
-<div class="bg">
+<body onload="getWidthValue()">
+<div id="margin" >
+<div class="bg_head">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
@@ -28,8 +36,12 @@
 		</font>
 	</div>
   <div class="contentStyle">
-	<div class="titleStyle">标准多段落文本测试-1<br>wjr<br>1970-01-01<br>单页,多段落,样式测试</div>
-	<div class="newstextStyle"><p>&nbsp;<span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 2em;">今天，我高兴地同大家一起参加这次将成为我国历史上为争取自由而举行的最伟大的示威集会。</span></p>
+	   <div class="titleStyle">
+         标准多段落文本测试-1<br>wjr<br>单页,多段落,样式测试     </div>
+  </div>
+</div>
+<div class="bg_body">
+      <div class="newstextStyle"><p>&nbsp;<span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 2em;">今天，我高兴地同大家一起参加这次将成为我国历史上为争取自由而举行的最伟大的示威集会。</span></p>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">100年前，一位伟大的美国人--今天我们就站在他的雕像前--签署了《解放黑奴宣言》。这项重要法令的颁布，对于千百万灼烤于非正义残焰中的黑奴，犹如带来希望之光的硕大灯塔，恰似结束漫漫长夜禁锢的欢畅黎明。</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">然而100年后的今天，我们必须正视黑人还没有得到自由这一悲惨的事实。100年后的今天，在种族隔离的镣铐和种族歧视的枷锁下，黑人的生活备受压榨。100年后的今天，黑人仍生活在物质充裕的海洋中一个穷困的孤岛上。100年后的今天，黑人仍然蜷缩在美国社会的角落里，并且意识到自己是故土家园中的流亡者。今天我们在这里集会，就是要把这种骇人听闻的情况公诸世人。</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">就某种意义而言，今天我们是为了要求兑现诺言而汇集到我们国家的首都来的。我们共和国的缔造者草拟宪法和独立宣言的气壮山河的词句时，曾向每一个美国人许下了诺言，他们承诺所有人--不论白人还是黑人--都享有不可让渡的生存权、自由权和追求幸福权。</div>
@@ -43,12 +55,11 @@
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">只要我们在外奔波而疲乏的身躯不能在公路旁的汽车旅馆和城里的旅馆找到住宿之所，我们就绝不会满足。</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">只要黑人的基本活动范围只是从少数民族聚居的小贫民区转移到大贫民区，我们就绝不会满足。</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">只要我们的孩子被&ldquo;仅限白人&rdquo;的标语剥夺自我和尊严，我们就绝不会满足。</div></div>
-  <div class="newstextStyle pageurl" ></div>
-</div>
+    </div>
+<div class="pageEnd"></div>
 </div>
 <script>
 "use strict";
-
 (function () {
 
   var target = document.querySelector(".target");
@@ -99,6 +110,8 @@
   }
 
   window.addEventListener("resize", resizeFunc);
+  
 })();</script>
+
 </body>
 </html>

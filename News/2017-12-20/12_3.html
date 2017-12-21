@@ -2,14 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="../../css/News.css" rel="stylesheet">
+<link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
 <title>无标题文档</title>
 <style>
 	body {  background-color: #333333;};
 </style>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 </head>
-<body>
-<div class="bg">
+<body onload="getWidthValue()">
+<div id="margin" >
+<div class="bg_head">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
@@ -28,8 +36,12 @@
 		</font>
 	</div>
   <div class="contentStyle">
-	<div class="titleStyle">标准含图文本测试<br>wjr<br>1970-01-01<br>图片,测试,时间修复测试</div>
-	<div class="newstextStyle"></div>
+	   <div class="titleStyle">
+         标准含图文本测试<br>wjr<br>图片,测试,时间修复测试     </div>
+  </div>
+</div>
+<div class="bg_body">
+      <div class="newstextStyle"></div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">I have a dream today!</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">I have a dream that one day, down in Alabama, with its vicious racists, with its governor having his lips dripping with the words of &quot;interposition&quot; and &quot;nullification&quot; -- one day right there in Alabama little black boys and black girls will be able to join hands with little white boys and white girls as sisters and brothers.</div>
@@ -44,12 +56,11 @@
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">And if America is to be a great nation, this must become true.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">And so let freedom ring from the prodigious hilltops of New Hampshire.</div>
 <div class="para" label-module="para" style="font-size: 14px; word-wrap: break-word; color: rgb(51, 51, 51); margin-bottom: 15px; text-indent: 2em; line-height: 24px; zoom: 1; font-family: arial, 宋体, sans-serif;">Let freedom ring from the mighty mountains of New York.</div>
-  <div class="newstextStyle pageurl" ><a title="Page">&nbsp;<b>3</b>/<b>4</b> </a>&nbsp;&nbsp;<a href="/News/2017-12-20/12.html">首页</a>&nbsp;<a href="/News/2017-12-20/12_2.html">上一页</a>&nbsp;<a href="/News/2017-12-20/12.html">1</a>&nbsp;<a href="/News/2017-12-20/12_2.html">2</a>&nbsp;<b>3</b>&nbsp;<a href="/News/2017-12-20/12_4.html">4</a>&nbsp;<a href="/News/2017-12-20/12_4.html">下一页</a>&nbsp;<a href="/News/2017-12-20/12_4.html">尾页</a></div>
-</div>
+    </div>
+<div class="pageEnd"></div>
 </div>
 <script>
 "use strict";
-
 (function () {
 
   var target = document.querySelector(".target");
@@ -100,6 +111,8 @@
   }
 
   window.addEventListener("resize", resizeFunc);
+  
 })();</script>
+
 </body>
 </html>
