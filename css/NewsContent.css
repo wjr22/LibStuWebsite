@@ -68,6 +68,8 @@
   height: auto;
   background-color: rgb(255,255,255);
   opacity: 0.675;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-top: 50px;
 }
 .contentStyle .titleStyle{
@@ -78,8 +80,8 @@
 
 }
 .bg_body .newstextStyle{
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
   font-family: sans-serif;
   background-image:url(../images/news_content_background.png);
   float: left;
@@ -89,7 +91,7 @@
 	height: auto;
 	background-color:#F97879;
 	font-family: 'Open Sans', Arial, sans-serif;
-	margin-top: 260px;margin-right: 35px; text-align: center;
+	margin-top: 340px;margin-right: 35px; text-align: center;
 }
 .pageEnd{
   background-image: url(../images/vers.png);

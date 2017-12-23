@@ -1,4 +1,9 @@
-<!doctype html>
+<?php
+if(!defined('InEmpireCMS'))
+{
+	exit();
+}
+?><!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -7,22 +12,14 @@
 <style>
 	body {  background-color: #333333;};
 </style>
-<script type="text/javascript">
-  function getWidthValue(){
-    var marginl=(screen.availWidth-30-1178)/2;
-    //document.getElementById("margin").style.marginLeft=marginl+"px";
-    document.getElementById("margin").style.marginLeft=marginl+"px";
-  }
-</script>
 </head>
-<body onload="getWidthValue()">
-  <div id="margin">
+<body>
 <div class="bg">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
 		    	<li><a href="../index.html"><font color="#EBE9E9">首页</font></a></li>
-		    	<li><a href="index.html"><font color="#EBE9E9">缤纷活动</font></a></li>
+		    	<li><a href="../html/news.html"><font color="#EBE9E9">缤纷活动</font></a></li>
 		    	<li><a href="../html/diary.html"><font color="#EBE9E9">馆员日志</font></a></li>
 		    	<li><a href="../html/ruler.html"><font color="#EBE9E9">规章制度</font></a></li>
 		    	<li><a href="../html/aboutus.html"><font color="#EBE9E9">关于我们</font></a></li>
@@ -38,16 +35,19 @@
 	<div id="newsTextBox">
 		<div class="leftBox">
 		   	<div class="newsTextBoxRecom">
-		   		
+		   		<ul>
+		   			<li><a href=""></a></li> 			
+		   		</ul>
 		   	</div>
 		   	<div class="newsHrefBox">
 		   		
 		   	</div>
 		</div>
 		<div class="newsIndexBox">
-			[e:loop={0,15,3,0}]
-<div class="text"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br></div>
-[/e:loop]
+			<p>hello world</p>
+			<p>hello world</p>
+			<p>hello world</p>
+			<p>hello world</p><p>hello world</p><p>hello world</p>
 		</div>
 		
 	</div>
@@ -109,7 +109,6 @@
 
   window.addEventListener("resize", resizeFunc);
 })();</script>
-</div>
 </body>
 </html>
 

@@ -33,9 +33,17 @@ a {
       });
     });
   </script>
+  <script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
   </head>
 
-  <body>
+  <body onload="getWidthValue()">
+<div id="margin">
 <a name="maj">
   <div class="data2">
       <div class="majorindex">
@@ -92,11 +100,11 @@ a {
       <p>abcdefghigkl</p>
       <p>sdfasfagawgawdsaf</p>
     </div>
-    <div class="newsIndex">
-                 <a href="/News/2017-12-20/12.html" target="_blank">标准含图文本测试</a> <br>
-                   <a href="/News/2017-12-20/11.html" target="_blank">标准多段落文本测试-1</a> <br>
-                   <a href="/News/2017-12-20/10.html" target="_blank">标准多段落文本测试-2</a> <br>
-                   <a href="/News/2017-12-19/9.html" target="_blank">新闻文本测试-样式测试</a> <br>
+     <div class="newsIndex">
+                <a href="/News/2017-12-20/12.html" target="_blank">标准含图文本测试</a> <br>
+                 <a href="/News/2017-12-20/11.html" target="_blank">标准多段落文本测试-1</a> <br>
+                 <a href="/News/2017-12-20/10.html" target="_blank">标准多段落文本测试-2</a> <br>
+                 <a href="/News/2017-12-19/9.html" target="_blank">新闻文本测试-样式测试</a> <br>
            </div>
   </div>
   </a> <a name="diary">
@@ -167,5 +175,6 @@ a {
   </div>
   </a>
 <div class="version"> </div>
+</div>
 </body>
 </html>

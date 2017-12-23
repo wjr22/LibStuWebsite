@@ -6,17 +6,18 @@
 <title>无标题文档</title>
 <style>
 	body {  background-color: #333333;};
-</style>
-</head>
-<script type="text/javascript">
+</style><script type="text/javascript">
   function getWidthValue(){
     var marginl=(screen.availWidth-30-1178)/2;
     //document.getElementById("margin").style.marginLeft=marginl+"px";
     document.getElementById("margin").style.marginLeft=marginl+"px";
   }
 </script>
-<body>
-<div class="bg" onload="getWidthValue()">
+</head>
+
+<body  onload="getWidthValue()">
+<div id="margin">
+  <div class="bg">
 	<div class="indexBox">
 		<nav class="mynav">
 		  <ul>
@@ -90,6 +91,7 @@
 
   window.addEventListener("resize", resizeFunc);
 })();</script>
+</div>
 </body>
 </html>
 

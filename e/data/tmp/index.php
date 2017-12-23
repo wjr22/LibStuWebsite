@@ -38,9 +38,17 @@ a {
       });
     });
   </script>
+  <script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
   </head>
 
-  <body>
+  <body onload="getWidthValue()">
+<div id="margin">
 <a name="maj">
   <div class="data2">
       <div class="majorindex">
@@ -97,8 +105,8 @@ a {
       <p>abcdefghigkl</p>
       <p>sdfasfagawgawdsaf</p>
     </div>
-    <div class="newsIndex">
-     <?php
+     <div class="newsIndex">
+      <?php
 $bqno=0;
 $ecms_bq_sql=sys_ReturnEcmsLoopBq(0,7,3,0);
 if($ecms_bq_sql){
@@ -106,7 +114,7 @@ while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
-            <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
+          <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
        <?php
 }
 }
@@ -181,5 +189,6 @@ $bqno++;
   </div>
   </a>
 <div class="version"> </div>
+</div>
 </body>
 </html>

@@ -33,9 +33,17 @@ a {
       });
     });
   </script>
+  <script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
   </head>
 
-  <body>
+  <body onload="getWidthValue()">
+<div id="margin">
 <a name="maj">
   <div class="data2">
       <div class="majorindex">
@@ -166,5 +174,6 @@ a {
   </div>
   </a>
 <div class="version"> </div>
+</div>
 </body>
 </html>

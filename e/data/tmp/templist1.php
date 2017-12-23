@@ -12,8 +12,16 @@ if(!defined('InEmpireCMS'))
 <style>
 	body {  background-color: #333333;};
 </style>
+<script type="text/javascript">
+  function getWidthValue(){
+    var marginl=(screen.availWidth-30-1178)/2;
+    //document.getElementById("margin").style.marginLeft=marginl+"px";
+    document.getElementById("margin").style.marginLeft=marginl+"px";
+  }
+</script>
 </head>
-<body>
+<body onload="getWidthValue()">
+  <div id="margin">
 <div class="bg">
 	<div class="indexBox">
 		<nav class="mynav">
@@ -116,7 +124,6 @@ $bqno++;
 
   window.addEventListener("resize", resizeFunc);
 })();</script>
+</div>
 </body>
 </html>
-
-

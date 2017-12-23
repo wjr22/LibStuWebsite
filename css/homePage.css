@@ -12,39 +12,33 @@
     }
 .majorindex{
 	background-image: url(./../images/bg1.png);
-	margin-left: 35px;
 	margin-top: 0px;
 	height: 663px;
 	width:1178px;
 }
 .News{
 	background-image: url(../images/bg2.png);
-	margin-left: 35px;
 	height: 509px;
 	width:1178px;
 }
 .Diary{
 	background-image: url(./../images/bg3.png);
-	margin-left: 35px;
 	height: 509px;
 	width:1178px;
 }
 .Rules{
 	background-image: url(.././images/bg4.png);
-	margin-left: 35px;
 	height: 509px;
 	width:1178px;
 }
 .AboutUs{
 	background-image: url(.././images/bg5.png);
-	margin-left: 35px;
 	margin-top: 0px;
 	height: 509px;
 	width:1178px;
 }
 .version{
 	background-image: url(.././images/vers.png);
-	margin-left: 35px;
 	margin-top: 0px;
 	height: 139px;
 	width:1178px;
