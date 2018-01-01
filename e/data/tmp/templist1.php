@@ -50,19 +50,13 @@ if(!defined('InEmpireCMS'))
 		   	</div>
 		</div>
 		<div class="newsIndexBox">
-			<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq(0,15,3,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-<div class="text"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br></div>
-<?php
-}
-}
-?>
+			[!--empirenews.listtemp--]
+                                <tr>
+                                   <td height="23">
+                                <!--list.var1-->
+                                  </td>
+                                </tr>
+                       [!--empirenews.listtemp--]
 		</div>
 		
 	</div>
