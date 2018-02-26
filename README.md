@@ -23,3 +23,6 @@
 >>		/News/date/ : contain all newsContent pushing in this day
 >5. \./images/ as letter
 >6. \./js/ remains to be improved
+##Test!
+> 1. 新闻文本发布测试
+>>  1.1样式测试：

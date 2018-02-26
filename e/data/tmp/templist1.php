@@ -56,7 +56,11 @@ if(!defined('InEmpireCMS'))
                                 <!--list.var1-->
                                   </td>
                                 </tr>
+                              
                        [!--empirenews.listtemp--]
+               
+                            <p>   [!--show.page--]</p>
+                                  
 		</div>
 		
 	</div>
