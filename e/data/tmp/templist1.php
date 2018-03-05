@@ -10,7 +10,7 @@ if(!defined('InEmpireCMS'))
 <link type="text/css" href="../css/News.css" rel="stylesheet">
 <title>无标题文档</title>
 <style>
-	body {  background-color: #333333;};
+  body {  background-color: #333333;};
 </style>
 <script type="text/javascript">
   function getWidthValue(){
@@ -23,47 +23,45 @@ if(!defined('InEmpireCMS'))
 <body onload="getWidthValue()">
   <div id="margin">
 <div class="bg">
-	<div class="indexBox">
-		<nav class="mynav">
-		  <ul>
-		    	<li><a href="../index.html"><font color="#EBE9E9">首页</font></a></li>
-		    	<li><a href="index.html"><font color="#EBE9E9">缤纷活动</font></a></li>
-		    	<li><a href="../html/diary.html"><font color="#EBE9E9">馆员日志</font></a></li>
-		    	<li><a href="../html/ruler.html"><font color="#EBE9E9">规章制度</font></a></li>
-		    	<li><a href="../html/aboutus.html"><font color="#EBE9E9">关于我们</font></a></li>
-		  </ul>
-		</nav>
-		<span class="target"></span>
-	</div>
-	<div class="currenthtml">
-	 <font size="+1" color="#564747">
-		<b>当前位置： 缤纷活动</b>
-		</font>
-	</div>
-	<div id="newsTextBox">
-		<div class="leftBox">
-		   	<div class="newsTextBoxRecom">
-		   		
-		   	</div>
-		   	<div class="newsHrefBox">
-		   		
-		   	</div>
-		</div>
-		<div class="newsIndexBox">
-			[!--empirenews.listtemp--]
-                                <tr>
-                                   <td height="23">
-                                <!--list.var1-->
-                                  </td>
-                                </tr>
-                              
-                       [!--empirenews.listtemp--]
-               
-                            <p>   [!--show.page--]</p>
-                                  
-		</div>
-		
-	</div>
+  <div class="indexBox">
+    <nav class="mynav">
+      <ul>
+          <li><a href="../index.html"><font color="#EBE9E9">首页</font></a></li>
+          <li><a href="index.html"><font color="#EBE9E9">缤纷活动</font></a></li>
+          <li><a href="../html/diary.html"><font color="#EBE9E9">馆员日志</font></a></li>
+          <li><a href="../html/ruler.html"><font color="#EBE9E9">规章制度</font></a></li>
+          <li><a href="../html/aboutus.html"><font color="#EBE9E9">关于我们</font></a></li>
+      </ul>
+    </nav>
+    <span class="target"></span>
+  </div>
+  <div class="currenthtml">
+   <font size="+1" color="#564747">
+    <b>当前位置： 缤纷活动</b>
+    </font>
+  </div>
+  <div id="newsTextBox">
+    <div class="leftBox">
+        <div class="newsTextBoxRecom">
+          
+        </div>
+        <div class="newsHrefBox">
+          
+        </div>
+    </div>
+    <div class="newsIndexBox">
+        [!--empirenews.listtemp--]
+            <tr>
+                <td height="23">
+                  <!--list.var1-->
+                </td>
+            </tr>
+        [!--empirenews.listtemp--]
+    </div>
+      <div class="listpage">
+          	[!--show.page--]
+      </div>
+  </div>
 </div>
 <script>
 "use strict";
@@ -124,4 +122,4 @@ if(!defined('InEmpireCMS'))
 })();</script>
 </div>
 </body>
-</html>
+</html

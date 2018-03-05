@@ -1,11 +1,11 @@
 <?php
-$class_r[3]=Array('classid'=>3,
+$class_r[1]=Array('classid'=>1,
 'bclassid'=>0,
-'classname'=>'News',
+'classname'=>'新闻',
 'sonclass'=>'',
 'featherclass'=>'',
 'islast'=>1,
-'classpath'=>'News',
+'classpath'=>'xinwen',
 'classtype'=>'.html',
 
 'down_num'=>2,
@@ -22,7 +22,7 @@ $class_r[3]=Array('classid'=>3,
 'openadd'=>1,
 
 'checked'=>1,
-'bname'=>'News',
+'bname'=>'新闻',
 
 'reorder'=>'newstime DESC',
 'dtlisttempid'=>1);

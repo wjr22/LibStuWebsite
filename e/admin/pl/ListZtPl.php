@@ -170,6 +170,7 @@ function CheckAll(form)
 <input type=hidden name=ztid value=<?=$ztid?>>
   <input name="isgood" type="hidden" id="isgood" value="1">
   <input type=hidden name=restb value=<?=$ztr['restb']?>>
+  <input name="docheck" type="hidden" id="docheck" value="0">
   <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder" style="WORD-BREAK: break-all; WORD-WRAP: break-word">
     <tr class="header"> 
       <td width="4%" height="25"><div align="center">选择</div></td>
@@ -228,7 +229,9 @@ function CheckAll(form)
           <input type=checkbox name=chkall value=on onclick=CheckAll(this.form)>
         </div></td>
       <td height="25" colspan="4"> <div align="right"> 
-          <input type="submit" name="Submit" value="审核评论" onClick="document.form1.enews.value='CheckPl_all';">
+          <input type="submit" name="Submit" value="审核评论" onClick="document.form1.enews.value='CheckPl_all';document.form1.docheck.value='0';">
+          &nbsp;&nbsp;&nbsp; 
+		  <input type="submit" name="Submit" value="取消审核评论" onClick="document.form1.enews.value='CheckPl_all';document.form1.docheck.value='1';">
           &nbsp;&nbsp;&nbsp; 
           <input type="submit" name="Submit3" value="推荐评论" onClick="document.form1.enews.value='DoGoodPl_all';document.form1.isgood.value='1';">
           &nbsp;&nbsp;&nbsp; 

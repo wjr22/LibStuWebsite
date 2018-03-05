@@ -146,3 +146,6 @@ margin-left: 4px;
   font-family: sans-serif;
   background-image:url(../images/news_content_background.png);
 }
+.listpage{
+  padding-left: 600px;
+}

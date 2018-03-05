@@ -227,6 +227,7 @@ function CheckAll(form)
 <input type=hidden name=id value=<?=$id?>>
 <input type=hidden name=restb value=<?=$restb?>>
   <input name="isgood" type="hidden" id="isgood" value="1">
+  <input name="docheck" type="hidden" id="docheck" value="0">
   <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder" style="WORD-BREAK: break-all; WORD-WRAP: break-word">
     <tr class="header"> 
       <td width="4%" height="25"><div align="center">选择</div></td>
@@ -324,8 +325,10 @@ function CheckAll(form)
           <input type=checkbox name=chkall value=on onclick=CheckAll(this.form)>
         </div></td>
       <td height="25" colspan="3"> <div align="right">
-          <input type="submit" name="Submit" value="审核评论" onClick="document.form1.enews.value='CheckPl_all';">
+          <input type="submit" name="Submit" value="审核评论" onClick="document.form1.enews.value='CheckPl_all';document.form1.docheck.value='0';">
           &nbsp;&nbsp;&nbsp; 
+		  <input type="submit" name="Submit" value="取消审核评论" onClick="document.form1.enews.value='CheckPl_all';document.form1.docheck.value='1';">
+          &nbsp;&nbsp;&nbsp;
           <input type="submit" name="Submit3" value="推荐评论" onClick="document.form1.enews.value='DoGoodPl_all';document.form1.isgood.value='1';">
           &nbsp;&nbsp;&nbsp; 
           <input type="submit" name="Submit4" value="取消推荐评论" onClick="document.form1.enews.value='DoGoodPl_all';document.form1.isgood.value='0';">
@@ -338,7 +341,7 @@ function CheckAll(form)
       <td height="25">&nbsp;</td>
       <td height="25" colspan="3"> 
         <?=$returnpage?>
-         </td>
+      </td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="25" colspan="4"><font color="#666666">说明：多选框为蓝色代表未审核评论，加粗网名为登陆会员，发布时间红色为推荐评论</font></td>

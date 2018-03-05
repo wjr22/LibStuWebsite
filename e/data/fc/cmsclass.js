@@ -1,1 +1,1 @@
-document.write("<option value=\'3\' style=\'background:#99C4E3\'>|-News</option>");
+document.write("<option value=\'1\' style=\'background:#99C4E3\'>|-新闻</option>");

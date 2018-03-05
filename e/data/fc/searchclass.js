@@ -1,1 +1,1 @@
-document.write("<option value=\'3\'>|-News</option>");
+document.write("<option value=\'1\'>|-新闻</option>");
