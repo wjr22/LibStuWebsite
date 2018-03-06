@@ -149,3 +149,17 @@ margin-left: 4px;
 .listpage{
   padding-left: 600px;
 }
+.aboutusContent{
+  margin-top: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.logobox{
+  margin-top: 20px;
+  display:block;
+  margin-left: 439px;
+  margin-right: 438px;
+}
+.aboutusContent p{
+  text-indent: 2em;
+}

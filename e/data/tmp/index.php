@@ -14,7 +14,7 @@ if(!defined('InEmpireCMS'))
   <link rel="shortcut icon" href="/favicon.ico" >
   <script src="js/imageChange.js" type="text/javascript"></script>
   <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-  <title>无标题文档</title>
+  <title>南师图书馆馆员协会-首页</title>
   <style>
 p {
 	margin: 0.5em 0;
@@ -59,8 +59,8 @@ a {
         </a> </div>
       <div class="introduction">
           <p><b>缤纷活动</b></p>
-          <p>写点介绍文字000</p>
-          <p>在写点啥</p>
+          <p>这里是图协举办的活动</p>
+          <p></p>
         </div>
     </div>
       <div class="index"> 
@@ -70,8 +70,8 @@ a {
         </a> </div>
       <div class="introduction">
           <p><b>馆员日志</b></p>
-          <p>写点介绍文字000</p>
-          <p>在写点啥</p>
+          <p></p>
+          <p></p>
         </div>
     </div>
       <div class="index"> <div class="image_container row"> <a href="#rules">
@@ -80,8 +80,8 @@ a {
         </a> </div>
       <div class="introduction">
           <p><b>规章制度</b></p>
-          <p>写点介绍文字000</p>
-          <p>在写点啥</p>
+          <p></p>
+          <p></p>
         </div>
     </div>
       <div class="index"><div class="image_container row"> <a href="#about">
@@ -90,8 +90,8 @@ a {
         </a> </div>
       <div class="introduction">
           <p><b>关于我们</b></p>
-          <p>写点介绍文字000</p>
-          <p>在写点啥</p>
+          <p></p>
+          <p></p>
         </div>
     </div>
     </div>
@@ -102,8 +102,8 @@ a {
     <p>更多></p>
     </font> </a> </div>
     <div class="newsPicBox"> <img src="./images/textPic.jpg">
-      <p>abcdefghigkl</p>
-      <p>sdfasfagawgawdsaf</p>
+      <p>这是我们的合照</p>
+      <p></p>
     </div>
      <div class="newsIndex">
      <?php
@@ -128,7 +128,7 @@ $bqno++;
     </font> </a> </div>
     <div id="diaryPicBox">
       <div class="shutter">
-        <div class="shutter-img"> <a href="#" data-shutter-title="hello world1"><img src="images/shutter_1.jpg" alt="#"></a> <a href="#" data-shutter-title="hello world2"><img src="images/shutter_2.jpg" alt="#"></a> <a href="#" data-shutter-title="hello world3"><img src="images/shutter_3.jpg" alt="#"></a> <a href="#" data-shutter-title="hello world4"><img src="images/shutter_4.jpg" alt="#"></a> </div>
+        <div class="shutter-img"> <a href="#" data-shutter-title="图协成员志愿展示"><img src="images/shutter_1.jpg" alt="#"></a> <a href="#" data-shutter-title="上书比赛"><img src="images/shutter_2.jpg" alt="#"></a> <a href="#" data-shutter-title="旧书封面展示"><img src="images/shutter_3.jpg" alt="#"></a> <a href="#" data-shutter-title="与学长交流"><img src="images/shutter_4.jpg" alt="#"></a> </div>
         <ul class="shutter-btn">
           <li class="prev"></li>
           <li class="next"></li>
@@ -176,14 +176,10 @@ $bqno++;
     </font> </a> </div>
     <div class="aboutTextBox">
     <font size="+2" color="#FFFFFF">
-    	<p>写点啥</p>
-    	<p>再写点啥</p>
-    	<p>继续写点啥</p>
-    	<p>继续写点啥</p>
-    	<p>继续写点啥</p>
-    	<p>继续写点啥</p>
-    	<p>继续写点啥</p>
-    	<p>继续写点啥</p>
+    	 <p style="margin-left:200px;margin-right:200px;margin-top:50px;">         南京师范大学图书馆学生馆员协会是由学生自发组织、图书馆协助成立，由会员自主管理，并由会员自主策划、组织实施南京师范大学图书馆各项服务和活动的学生社团。
+            </p>
+            <p style="margin-left:200px;margin-right:200px;margin-top:50px;">        协会以全体师生为服务对象，参与图书馆管理，协助图书馆开展各项工作，组织全体师生开展图书节、争做文明读者等活动，表彰先进，树立正气，引导全体师生养成文明阅读、勤奋好学之风。
+            </p>
     	</font>
     </div>
   </div>
