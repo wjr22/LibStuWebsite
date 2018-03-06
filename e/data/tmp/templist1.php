@@ -52,7 +52,7 @@ if(!defined('InEmpireCMS'))
     <div class="newsIndexBox">
         [!--empirenews.listtemp--]
             <tr>
-                <td height="23">
+                <td height="35">
                   <!--list.var1-->
                 </td>
             </tr>
@@ -122,4 +122,4 @@ if(!defined('InEmpireCMS'))
 })();</script>
 </div>
 </body>
-</html
+</html>

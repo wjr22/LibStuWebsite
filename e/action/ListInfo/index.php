@@ -159,7 +159,7 @@ $page=(int)$_GET['page'];
 $page=RepPIntvar($page);
 $start=0;
 $line=$class_r[$classid]['lencord'];//每页显示记录数
-$page_line=10;//每页显示链接数
+$page_line=$public_r['listpagelistnum'];//每页显示链接数
 $offset=$page*$line;//总偏移量
 //列表：缓存
 $ecms_tofunr['cachetype']='classlist';

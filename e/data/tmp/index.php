@@ -106,16 +106,16 @@ a {
       <p>sdfasfagawgawdsaf</p>
     </div>
      <div class="newsIndex">
-      <?php
+     <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq(0,7,3,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(0,10,3,0,'','newstime DESC');
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
-          <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a> <br>
-       <?php
+<a href="<?=$bqsr['titleurl']?>" target="_blank"><u><?=$bqr['title']?>     <small><?=date('Y-m-d',$bqr[newstime])?></small></u></a><br>
+<?php
 }
 }
 ?>
