@@ -1,101 +1,222 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<link type="text/css" href="../css/News.css" rel="stylesheet">
-<title>规章制度</title>
-<style>
-	body {  background-color: #333333;};
-</style>
-<script type="text/javascript">
-  function getWidthValue(){
-    var marginl=(screen.availWidth-30-1178)/2;
-    //document.getElementById("margin").style.marginLeft=marginl+"px";
-    document.getElementById("margin").style.marginLeft=marginl+"px";
-  }
-</script>
+  <meta charset="utf-8">
+  <link type="text/css" href="../css/Others.css" rel="stylesheet">
+  <title>规章制度</title>
+  <style>
+    body {
+      background-color: #333333;
+    }
+
+    ;
+  </style>
+  <script type="text/javascript">
+    function getWidthValue() {
+      var marginl = (screen.availWidth - 30 - 1178) / 2;
+      //document.getElementById("margin").style.marginLeft=marginl+"px";
+      document.getElementById("margin").style.marginLeft = marginl + "px";
+    }
+  </script>
 </head>
 
 <body onload="getWidthValue()">
-  <div id="margin">
-<div class="bg">
-	<div class="indexBox">
-		<nav class="mynav">
-		  <ul>
-		    	<li><a href="../index.html"><font color="#EBE9E9">首页</font></a></li>
-		    	<li><a href="../xinwen/index.html"><font color="#EBE9E9">缤纷活动</font></a></li>
-		    	<li><a href="../html/diary.html"><font color="#EBE9E9">馆员日志</font></a></li>
-		    	<li><a href="../html/ruler.html"><font color="#EBE9E9">规章制度</font></a></li>
-		    	<li><a href="../html/aboutus.html"><font color="#EBE9E9">关于我们</font></a></li>
-		  </ul>
-		</nav>
-		<span class="target"></span>
-	</div>
-	<div class="currenthtml">
-	 <font size="+1" color="#564747">
-		<b>当前位置： 规章制度</b>
-		</font>
-	</div>
-	<div id="newsTextBox">
-		
-	</div>
-</div>
-<script>
-"use strict";
+  <script>
+    "use strict";
 
-(function () {
+    (function () {
 
-  var target = document.querySelector(".target");
-  var links = document.querySelectorAll(".mynav a");
-  var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
+      var target = document.querySelector(".target");
+      var links = document.querySelectorAll(".mynav a");
+      var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
 
-  function mouseenterFunc() {
-    if (!this.parentNode.classList.contains("active")) {
-      for (var i = 0; i < links.length; i++) {
-        if (links[i].parentNode.classList.contains("active")) {
-          links[i].parentNode.classList.remove("active");
+      function mouseenterFunc() {
+        if (!this.parentNode.classList.contains("active")) {
+          for (var i = 0; i < links.length; i++) {
+            if (links[i].parentNode.classList.contains("active")) {
+              links[i].parentNode.classList.remove("active");
+            }
+            links[i].style.opacity = "0.25";
+          }
+
+          this.parentNode.classList.add("active");
+          this.style.opacity = "1";
+
+          var width = this.getBoundingClientRect().width;
+          var height = this.getBoundingClientRect().height;
+          var left = this.getBoundingClientRect().left + window.pageXOffset;
+          var top = this.getBoundingClientRect().top + window.pageYOffset;
+          var color = colors[Math.floor(Math.random() * colors.length)];
+
+          target.style.width = width + "px";
+          target.style.height = height + "px";
+          target.style.left = left + "px";
+          target.style.top = top + "px";
+          target.style.borderColor = color;
+          target.style.transform = "none";
         }
-        links[i].style.opacity = "0.25";
       }
 
-      this.parentNode.classList.add("active");
-      this.style.opacity = "1";
+      for (var i = 0; i < links.length; i++) {
 
-      var width = this.getBoundingClientRect().width;
-      var height = this.getBoundingClientRect().height;
-      var left = this.getBoundingClientRect().left + window.pageXOffset;
-      var top = this.getBoundingClientRect().top + window.pageYOffset;
-      var color = colors[Math.floor(Math.random() * colors.length)];
+        links[i].addEventListener("mouseenter", mouseenterFunc);
+      }
 
-      target.style.width = width + "px";
-      target.style.height = height + "px";
-      target.style.left = left + "px";
-      target.style.top = top + "px";
-      target.style.borderColor = color;
-      target.style.transform = "none";
-    }
-  }
+      function resizeFunc() {
+        var active = document.querySelector(".mynav li.active");
 
-  for (var i = 0; i < links.length; i++) {
-  
-    links[i].addEventListener("mouseenter", mouseenterFunc);
-  }
+        if (active) {
+          var left = active.getBoundingClientRect().left + window.pageXOffset;
+          var top = active.getBoundingClientRect().top + window.pageYOffset;
 
-  function resizeFunc() {
-    var active = document.querySelector(".mynav li.active");
+          target.style.left = left + "px";
+          target.style.top = top + "px";
+        }
+      }
 
-    if (active) {
-      var left = active.getBoundingClientRect().left + window.pageXOffset;
-      var top = active.getBoundingClientRect().top + window.pageYOffset;
+      window.addEventListener("resize", resizeFunc);
+    })();</script>
+  <div id="margin">
+    <div class="bg">
+      <div class="indexBox">
+        <nav class="mynav">
+          <ul>
+            <li>
+              <a href="../index.html">
+                <font color="#EBE9E9">首页</font>
+              </a>
+            </li>
+            <li>
+              <a href="../xinwen/index.html">
+                <font color="#EBE9E9">缤纷活动</font>
+              </a>
+            </li>
+            <li>
+              <a href="../html/diary.html">
+                <font color="#EBE9E9">馆员日志</font>
+              </a>
+            </li>
+            <li>
+              <a href="../html/ruler.html">
+                <font color="#EBE9E9">规章制度</font>
+              </a>
+            </li>
+            <li>
+              <a href="../html/aboutus.html">
+                <font color="#EBE9E9">关于我们</font>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <span class="target"></span>
+      </div>
+      <div class="currenthtml">
+        <font size="+1" color="#564747">
+          <b>当前位置： 规章制度</b>
+        </font>
+      </div>
+    </div>
+    <div class="newsTextBox">
+      <div class="Atest" >
+        <h1>总则</h1>
+        <h3>第一条 性质：</h3>南京师范大学图书馆学生馆员协会（以下简称“协会”）是由学生自发组织、图书馆协助成立。协会是由会员自主管理，并由会员自主策划、组织实施南师大图书馆各项服务和活动的学生社团。
+        <h3>第二条 宗旨：</h3>是“共建文明和谐图书馆，促进文明阅读之风，服务广大师生，提高自身素质”。协会以全体师生为服务对象，参与图书馆管理，协助图书馆开展各项工作，组织全体师生开展图书节、争做文明读者等活动，表彰先进，树立正气，引导全体师生养成文明阅读、勤奋好学之风。
+        <h1>第二章 学生馆员</h1>
+        <h3>第三条</h3> 凡是在南京师范大学图书馆工作的勤助生和志愿者，统称为“学生馆员”，须承认协会章程，均视为协会成员，无须另行申请。申请学生馆员的审核过程按照“自愿报名、择优录用、培训考核”的程序进行。工作结束，不再在图书馆做学生馆员的同学可自愿退出协会。对于不称职的学生馆员，协会管理委员会经讨论后，可做除名处理。
+        <h4>（一）学生馆员具体要求：</h4>
+        <ol>
+          <li>学生馆员必须为我校在册学生；</li>
+          <li>品学兼优、乐于奉献，具有良好的服务意识、读者至上的服务理念；</li>
+          <li> 敢于管理、秉公办事，具有认真负责、踏实肯干、严谨高效的工作作风；</li>
+          <li>具有坦诚、友爱、协作、共进的团队精神；</li>
+          <li>遵守图书馆的规章制度，能够正确引导他人文明阅读，甘当传播知识与文明的使者。</li>
+        </ol>
+        <h4>（二）学生馆员的招收程序：</h4>
+        <ol>
+          <li>在图书馆主页“预约系统”中申请；</li>
+          <li>由图书馆负责录用（部分岗位需面试、考核）</li>
+          <li>参加由馆内组织的岗位培训，试用合格，即可成为正式的学生馆员；</li>
+          <li>学生馆员在图书馆工作时间须穿着勤助生红马夹或佩戴志愿者胸牌。</li>
+        </ol>
+        <h3>第四条 学生馆员的权利</h3>
+        <ol>
+          <li>有选举权和被选举权；</li>
+          <li>图书馆对每学年表现突出的学生馆员进行适当奖励；</li>
+          <li>有权通过各种正当途径和方式对协会各级组织和干部及其工作进行监督和提出建议；</li>
+          <li>有参加协会举办的各项活动的权利；</li>
+          <li>工作满一年，考核合格，颁发图书馆盖章的学生馆员证书；</li>
+          <li>每届表现良好的学生馆员经协会干部讨论决定后可留任。</li>
+        </ol>
+        <h3>第五条 学生馆员的义务</h3>
+        <ol>
+          <li>遵守“协会”章程和其他规章制度，执行“协会”的决议；</li>
+          <li>熟知《图书馆读者指南》，解答读者咨询，工作不敷衍、不推诿，尊重读者，维护读者权益；</li>
+          <li>掌握一定的图书馆工作技能，在专职工作人员指导下有序地管理或者从事相应岗位的工作；</li>
+          <li>及时整理和反映读者对图书馆工作的意见和建议，并将图书馆反馈的信息及时通报给读者，积极发挥桥梁、纽带作用；</li>
+          <li>引导师生做文明读者，引导读者养成勤奋好学之气，提高图书馆资源的利用率；</li>
+          <li>保证每周至少2小时工作时间，不无故缺勤。</li>
+        </ol>
+        <h1>第三章 组织管理制度</h1>
+        <h3>第六条 协会的领导班子</h3>协会的领导班子由会长和宣传部、策划部、督查部、实践部和技术部各部部长组成。领导班子对协会的各项工作进行指导和监督，决定协会的重大事项。
+        <h3> 第七条 部门职责</h3>
+        （一）策划部 制度建设：建立健全协会各项规章制度，使各项工作制度化、规范化； 活动策划：负责协会实践活动的策划和方案制定。 （二）宣传部 形象宣传：负责协会对外的形象宣传工作，包括海报、展板等设计工作； 编辑方面：负责对协会各种活动的简报、通知、微信推送的撰写工作；
+        （三）实践部 会务安排：负责各种会议、值班等的安排、通知和考勤； 活动实施：负责组织实施实践活动。 （四）督查部 档案管理：负责对协会各种文件、人事档案、活动资料的整理保存以及各类证书、馆员工作证的制作和发放； 巡查考察：负责考勤学生馆员的工作情况，了解读者的意见和建议，及时反馈给图书馆。
+        （五）技术部 摄像录影：负责对图书馆或协会活动进行拍摄或录影以及后期加工； 网站运营：负责协会网站的管理与运营。
+        <h1>第四章 财务制度</h1>
+        <h3>第八条 协会经费</h3>
+        <h4>来源</h4>(一)捐赠、赞助; (二)在核准的活动范围内开展活动或服务的收入; (三)其他合法收入
+        <h4>注意事项</h4>
+        <ol>
+          <li>协会经费必须用于本章程规定的业务范围和事业的发展，不得挪作他用，不得在会员中分配。</li>
+          <li>协会建立严格的财务管理制度，保证财务资料合法，真实，准确，完整。</li>
+          <li>协会具有专门的财务人员。财务人员变动时，必须与接管人员办清交接手续。</li>
+          <li>协会资产管理必须执行南京师范大学规定的财务管理制度，接受会员大会和各级指导单位的监督。资产来源属于专项资金或者社会捐赠、资助的，必须接受团委的监督，并将有关情况以适当方式向会员公布。</li>
+          <li>协会资产，任何单位、个人不得侵占、私分和挪用</li>
+        </ol>
+        <h1>第五章 负责人产生程序</h1>
+        <h3>第九条 协会的会长、各部门部长</h3>
+        协会的会长、各部门部长必须具备下列条件：
+        <ol>
+          <li>拥护党的路线、方针、政策;</li>
+          <li>热心学生社团工作;</li>
+          <li>学习成绩中等以上，每学期无不及格课程;</li>
+          <li>大学期间未受过学校的处分;</li>
+        </ol>
+        <h3>第十条</h3> 协会会长、各部门负责人任期时间由社团会员大会决定，连任不得超过两届。
+        <h3>第十一条 协会会长行使下列职权：</h3>
+        <ol>
+          <li>召集和主持执行机构会议;</li>
+          <li>检查会员大会(或会员代表大会)、社团执行机构决议的落实情况;</li>
+          <li>代表协会签署有关重要文件;</li>
+          <li>协调各分枝机构、代表机构、实体机构开展工作;</li>
+        </ol>
+        <h1>第六章 章程的修改程序</h1>
+        <h3>第十二条</h3> 对协会章程的修改，须经会长及各部门部长表决通过后报会员大会(或会员代表大会)审议。
+        <h3>第十三条</h3> 协会修改的章程，须在会员大会(或会员代表大会)通过后15日内，经图书馆领导老师审查同意，并报社团登记管理机关核准后生效。
+        <h1>第七章 终止程序及终止后的财产处理</h1>
+        <h3>第十四条</h3> 协会自行解散或由于分立、合并等原因需要注销的，由理事会提出终止动议。
+        <h3>第十五条 </h3>协会终止动议须经会员大会(或会员代表大会)表决通过，并报业务主管单位审查同意。
+        <h3>第十六条 </h3>协会终止前，须在图书馆领导指导下成立清算组织，清理债权债务，处理善后事宜。清算期间，不开展清算以外的活动。
+        <h3>第十七条</h3> 协会经社团登记管理机关办理注销登记手续后即为终止。
+        <h1>第八章 附则 </h1>
+        <h3>第十八条</h3> 本章程须经会员大会通过方能生效，仅适用于南京师范大学图书馆协会，执行过程受全体师生监督。
+        <h3> 第十九条</h3> 本章程自发布之日起生效。
+        <h2> 附则：协会优秀学生馆员评选办法</h2> 为了能够使工作持续开展，鼓励先进，弘扬精神，特制订此奖励办法。
+        <h4>第一条 评选条件</h4>
+        <ol>
+          <li>热爱图书馆，热心图书馆工作，对本职工作恪尽职守；</li>
+          <li>能模范地遵守协会的规章制度，有明确的工作目标和良好的工作态度；</li>
+          <li>保质保量完成工作任务；</li>
+          <li>一学期病假不超过3次，事假不超过两次。</li>
+        </ol>
+        <h4>第二条 评选办法</h4> 根据学生馆员的出勤次数及工作表现，由相关老师和组长推荐，最终由实践部综合评价产生。
+        <h4>第三条 奖励办法</h4> 1、对于选出的优秀学生馆员，每人颁发荣誉证书及纪念品； 2、获奖名单在图书馆网站主页上表彰宣传。 第四条 本实施细则自发布之日起实行。
+      </div>
+    </div>
+    <div class="pageEnd">
 
-      target.style.left = left + "px";
-      target.style.top = top + "px";
-    }
-  }
-
-  window.addEventListener("resize", resizeFunc);
-})();</script>
-</div>
+    </div>
 </body>
-</html>
 
+</html>

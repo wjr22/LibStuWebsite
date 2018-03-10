@@ -1,105 +1,134 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
-<title>无标题文档</title>
-<style>
-	body {  background-color: #333333;};
-</style>
-<script type="text/javascript">
-  function getWidthValue(){
-    var marginl=(screen.availWidth-30-1178)/2;
-    //document.getElementById("margin").style.marginLeft=marginl+"px";
-    document.getElementById("margin").style.marginLeft=marginl+"px";
-  }
-</script>
+  <meta charset="utf-8">
+  <link type="text/css" href="../../css/NewsContent.css" rel="stylesheet">
+  <title>无标题文档</title>
+  <style>
+    body {
+      background-color: #333333;
+    }
+
+    ;
+  </style>
+  <script type="text/javascript">
+    function getWidthValue() {
+      var marginl = (screen.availWidth - 30 - 1178) / 2;
+      //document.getElementById("margin").style.marginLeft=marginl+"px";
+      document.getElementById("margin").style.marginLeft = marginl + "px";
+    }
+  </script>
 </head>
+
 <body onload="getWidthValue()">
-<div id="margin" >
-<div class="bg_head">
-	<div class="indexBox">
-		<nav class="mynav">
-		  <ul>
-		    	<li><a href="../../index.html"><font color="#EBE9E9">首页</font></a></li>
-		    	<li><a href="../index.html"><font color="#EBE9E9">缤纷活动</font></a></li>
-		    	<li><a href="../../html/diary.html"><font color="#EBE9E9">馆员日志</font></a></li>
-		    	<li><a href="../../html/ruler.html"><font color="#EBE9E9">规章制度</font></a></li>
-		    	<li><a href="../../html/aboutus.html"><font color="#EBE9E9">关于我们</font></a></li>
-		  </ul>
-		</nav>
-		<span class="target"></span>
-	</div>
-	<div class="currenthtml contentpage">
-	 <font size="+1" color="#564747">
-		<b>[!--newsnav--][!--title--]</b>
-		</font>
-	</div>
-  <div class="contentStyle">
-	   <div class="titleStyle">
-         [!--title--]<br>[!--username--]<br>[!--keyboard--]
-     </div>
-  </div>
-</div>
-<div class="bg_body">
+  <div id="margin">
+    <div class="bg_head">
+      <div class="indexBox">
+        <nav class="mynav">
+          <ul>
+            <li>
+              <a href="../../index.html">
+                <font color="#EBE9E9">首页</font>
+              </a>
+            </li>
+            <li>
+              <a href="../index.html">
+                <font color="#EBE9E9">缤纷活动</font>
+              </a>
+            </li>
+            <li>
+              <a href="../../html/diary.html">
+                <font color="#EBE9E9">馆员日志</font>
+              </a>
+            </li>
+            <li>
+              <a href="../../html/ruler.html">
+                <font color="#EBE9E9">规章制度</font>
+              </a>
+            </li>
+            <li>
+              <a href="../../html/aboutus.html">
+                <font color="#EBE9E9">关于我们</font>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <span class="target"></span>
+      </div>
+      <div class="currenthtml contentpage">
+        <font size="+1" color="#564747">
+          <b>[!--newsnav--][!--title--]</b>
+        </font>
+      </div>
+      <div class="contentStyle">
+        <div class="titleStyle">
+          [!--title--]
+          <br>[!--username--]
+          <br>[!--keyboard--]
+        </div>
+      </div>
+    </div>
+    <div class="bg_body">
       <div class="newstextStyle">[!--newstext--]</div>
     </div>
-<div class="pageEnd"></div>
-</div>
-<script>
-"use strict";
-(function () {
+    <div class="pageEnd"></div>
+  </div>
+  <script>
+    "use strict";
+    (function () {
 
-  var target = document.querySelector(".target");
-  var links = document.querySelectorAll(".mynav a");
-  var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
+      var target = document.querySelector(".target");
+      var links = document.querySelectorAll(".mynav a");
+      var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
 
-  function mouseenterFunc() {
-    if (!this.parentNode.classList.contains("active")) {
-      for (var i = 0; i < links.length; i++) {
-        if (links[i].parentNode.classList.contains("active")) {
-          links[i].parentNode.classList.remove("active");
+      function mouseenterFunc() {
+        if (!this.parentNode.classList.contains("active")) {
+          for (var i = 0; i < links.length; i++) {
+            if (links[i].parentNode.classList.contains("active")) {
+              links[i].parentNode.classList.remove("active");
+            }
+            links[i].style.opacity = "0.25";
+          }
+
+          this.parentNode.classList.add("active");
+          this.style.opacity = "1";
+
+          var width = this.getBoundingClientRect().width;
+          var height = this.getBoundingClientRect().height;
+          var left = this.getBoundingClientRect().left + window.pageXOffset;
+          var top = this.getBoundingClientRect().top + window.pageYOffset;
+          var color = colors[Math.floor(Math.random() * colors.length)];
+
+          target.style.width = width + "px";
+          target.style.height = height + "px";
+          target.style.left = left + "px";
+          target.style.top = top + "px";
+          target.style.borderColor = color;
+          target.style.transform = "none";
         }
-        links[i].style.opacity = "0.25";
       }
 
-      this.parentNode.classList.add("active");
-      this.style.opacity = "1";
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("mouseenter", mouseenterFunc);
+      }
 
-      var width = this.getBoundingClientRect().width;
-      var height = this.getBoundingClientRect().height;
-      var left = this.getBoundingClientRect().left + window.pageXOffset;
-      var top = this.getBoundingClientRect().top + window.pageYOffset;
-      var color = colors[Math.floor(Math.random() * colors.length)];
+      function resizeFunc() {
+        var active = document.querySelector(".mynav li.active");
 
-      target.style.width = width + "px";
-      target.style.height = height + "px";
-      target.style.left = left + "px";
-      target.style.top = top + "px";
-      target.style.borderColor = color;
-      target.style.transform = "none";
-    }
-  }
+        if (active) {
+          var left = active.getBoundingClientRect().left + window.pageXOffset;
+          var top = active.getBoundingClientRect().top + window.pageYOffset;
 
-  for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener("mouseenter", mouseenterFunc);
-  }
+          target.style.left = left + "px";
+          target.style.top = top + "px";
+        }
+      }
 
-  function resizeFunc() {
-    var active = document.querySelector(".mynav li.active");
+      window.addEventListener("resize", resizeFunc);
 
-    if (active) {
-      var left = active.getBoundingClientRect().left + window.pageXOffset;
-      var top = active.getBoundingClientRect().top + window.pageYOffset;
-
-      target.style.left = left + "px";
-      target.style.top = top + "px";
-    }
-  }
-
-  window.addEventListener("resize", resizeFunc);
-  
-})();</script>
+    })();</script>
 
 </body>
+
 </html>

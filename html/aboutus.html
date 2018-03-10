@@ -22,6 +22,60 @@
 </head>
 
 <body onload="getWidthValue()">
+  <script>
+    "use strict";
+
+    (function () {
+
+      var target = document.querySelector(".target");
+      var links = document.querySelectorAll(".mynav a");
+      var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
+
+      function mouseenterFunc() {
+        if (!this.parentNode.classList.contains("active")) {
+          for (var i = 0; i < links.length; i++) {
+            if (links[i].parentNode.classList.contains("active")) {
+              links[i].parentNode.classList.remove("active");
+            }
+            links[i].style.opacity = "0.25";
+          }
+
+          this.parentNode.classList.add("active");
+          this.style.opacity = "1";
+
+          var width = this.getBoundingClientRect().width;
+          var height = this.getBoundingClientRect().height;
+          var left = this.getBoundingClientRect().left + window.pageXOffset;
+          var top = this.getBoundingClientRect().top + window.pageYOffset;
+          var color = colors[Math.floor(Math.random() * colors.length)];
+
+          target.style.width = width + "px";
+          target.style.height = height + "px";
+          target.style.left = left + "px";
+          target.style.top = top + "px";
+          target.style.borderColor = color;
+          target.style.transform = "none";
+        }
+      }
+
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("mouseenter", mouseenterFunc);
+      }
+
+      function resizeFunc() {
+        var active = document.querySelector(".mynav li.active");
+
+        if (active) {
+          var left = active.getBoundingClientRect().left + window.pageXOffset;
+          var top = active.getBoundingClientRect().top + window.pageYOffset;
+
+          target.style.left = left + "px";
+          target.style.top = top + "px";
+        }
+      }
+
+      window.addEventListener("resize", resizeFunc);
+    })();</script>
   <div id="margin">
     <div class="bg">
       <div class="indexBox">
@@ -61,93 +115,44 @@
           <b>当前位置： 关于我们</b>
         </font>
       </div>
-      <div class="content">
-        <div class="logobox">
-          <img src="../images/logo.png">
-        </div>
-        <div class="aboutusContent">
-          <p>
-            南京师范大学图书馆学生馆员协会是由学生自发组织、图书馆协助成立，由会员自主管理，并由会员自主策划、组织实施南京师范大学图书馆各项服务和活动的学生社团。 协会以全体师生为服务对象，参与图书馆管理，协助图书馆开展各项工作，组织全体师生开展图书节、争做文明读者等活动，表彰先进，树立正气，引导全体师生养成文明阅读、勤奋好学之风。
-            协会共有宣传部、策划部、实践部、督察部以及技术部五大部门，各部门通力协作以保障各项活动地顺利开展
-          </p>
-          <br />
-          <p>策划部 策划部主要负责活动的策划工作，并协调各个部门之间的关系。当协会要组织一些集体活动时，由于各个其他部门的职能有限，策划部便显示出它的生命力，成为凝聚集体力量的不可缺少的“桥梁”，促进活动的开展。 策划部所涉及的方面包括活动详细计划、活动材料总结、各个部门任务分配等各方面。策划部的成员中，有擅长策划交流的活动者；有专攻文字编辑的书写人；有创意十足、天马行空的勇敢开路者；也有谙熟媒体工具的IT精英。
-            总体来说，策划部是一支具备操作媒体互动、多方面立体交叉、实施活动策划的团队。
-          </p>
-          <br />
-          <p>宣传部 宣传部作为每一个活动的先行者，宏观而又细致的规划整个活动的宣传流程；作为灵感喷发的作者，创造而有技巧地设计新颖的艺术海报；作为光影的魔术师，鼠标滑动间勾勒出一张张电脑图片……这就是宣传部，图书馆学生馆员协会的中坚力量！
-            宣传部主要负责活动的宣传推广。根据拍回的照片撰写新闻稿，编辑微信推送文案并协助运营图书馆官方公众号等。 宣传部是图书馆及协会不断扩大影响力的幕后推手，是协会十分重要的部门。
-          </p>
-          <br>
-          <p> 实践部 实践部并非大众误解中的做苦力、东奔西走、跑场子的部门，也不单单是接受任务并完成任务的非常被动的部门。实践部汇集了一帮积极热情、执行能力卓越的学生，我们第一时间配合策划部的活动策划，竭尽所能把每一项活动都落到实处，抓每个点，积极开展活动，统筹整个活动的具体实施，尽可能地把活动做到完美。
-            实践部是每次活动的主力军，前期筹备，中期落实，后期收场，每一步都是大家集体智慧劳动的结果。试想一项活动从纸上的设想变成实实在在的成品，多么充实且有成就感。
-          </p>
-          <br>
-          <p> 督察部 督察部的工作以读者为中心，读者第一，服务助人为宗旨。 督察部的主要职责包括检查图书馆各个阅读室的卫生情况、图书摆放情况等，帮助实施图书馆座位管理系统，杜绝占座、图书乱架等不良现象；负责监督协会人员的值班到岗情况，并统计人员的签到次数；管理协会的人员，做到让协会的人员遵守协会中的规章制度；与维权中心密切合作，及时了解全校师生对图书馆的建议并及时解决；协助各个部门工作，为各个部门工作起桥梁作用，给各个部分提供便利。
-            督察部作为图书馆协会坚强的后盾，尽职尽责的核查者，诚心诚意的服务者，努力给全校师生带来一个温馨、和谐的学习氛围，使图书馆的卫生、环境变得更加美好！
-          </p>
-          <br>
-          <p> 技术部 技术部是协会中最年轻的成员，工作包括：讲座等活动的录像与剪辑，协会官方网站的运营与维护等。技术部现已经汇聚了一部分擅长PS、录像、视频剪辑的技术性小能手，但由于协会未来将会推出自己的官方网站，所以特别欢迎专于网站制作或运营的同学们加入进来哦~
-          </p>
-          <br>
-        </div>
+    </div>
+    <div class="content">
+      <div class="logobox">
+        <img src="../images/logo.png">
+      </div>
+      <div class="aboutusContent">
+        <p>
+          南京师范大学图书馆学生馆员协会是由学生自发组织、图书馆协助成立，由会员自主管理，并由会员自主策划、组织实施南京师范大学图书馆各项服务和活动的学生社团。 协会以全体师生为服务对象，参与图书馆管理，协助图书馆开展各项工作，组织全体师生开展图书节、争做文明读者等活动，表彰先进，树立正气，引导全体师生养成文明阅读、勤奋好学之风。
+          协会共有宣传部、策划部、实践部、督察部以及技术部五大部门，各部门通力协作以保障各项活动地顺利开展
+        </p>
+        <br />
+        <p>
+          <h1>策划部</h1> 策划部主要负责活动的策划工作，并协调各个部门之间的关系。当协会要组织一些集体活动时，由于各个其他部门的职能有限，策划部便显示出它的生命力，成为凝聚集体力量的不可缺少的“桥梁”，促进活动的开展。 策划部所涉及的方面包括活动详细计划、活动材料总结、各个部门任务分配等各方面。策划部的成员中，有擅长策划交流的活动者；有专攻文字编辑的书写人；有创意十足、天马行空的勇敢开路者；也有谙熟媒体工具的IT精英。
+          总体来说，策划部是一支具备操作媒体互动、多方面立体交叉、实施活动策划的团队。
+        </p>
+        <br />
+        <p>
+          <h1>宣传部</h1> 宣传部作为每一个活动的先行者，宏观而又细致的规划整个活动的宣传流程；作为灵感喷发的作者，创造而有技巧地设计新颖的艺术海报；作为光影的魔术师，鼠标滑动间勾勒出一张张电脑图片……这就是宣传部，图书馆学生馆员协会的中坚力量！
+          宣传部主要负责活动的宣传推广。根据拍回的照片撰写新闻稿，编辑微信推送文案并协助运营图书馆官方公众号等。 宣传部是图书馆及协会不断扩大影响力的幕后推手，是协会十分重要的部门。
+        </p>
+        <br>
+        <p>
+          <h1>实践部</h1> 实践部并非大众误解中的做苦力、东奔西走、跑场子的部门，也不单单是接受任务并完成任务的非常被动的部门。实践部汇集了一帮积极热情、执行能力卓越的学生，我们第一时间配合策划部的活动策划，竭尽所能把每一项活动都落到实处，抓每个点，积极开展活动，统筹整个活动的具体实施，尽可能地把活动做到完美。
+          实践部是每次活动的主力军，前期筹备，中期落实，后期收场，每一步都是大家集体智慧劳动的结果。试想一项活动从纸上的设想变成实实在在的成品，多么充实且有成就感。
+        </p>
+        <br>
+        <p>
+          <h1>督察部</h1> 督察部的工作以读者为中心，读者第一，服务助人为宗旨。 督察部的主要职责包括检查图书馆各个阅读室的卫生情况、图书摆放情况等，帮助实施图书馆座位管理系统，杜绝占座、图书乱架等不良现象；负责监督协会人员的值班到岗情况，并统计人员的签到次数；管理协会的人员，做到让协会的人员遵守协会中的规章制度；与维权中心密切合作，及时了解全校师生对图书馆的建议并及时解决；协助各个部门工作，为各个部门工作起桥梁作用，给各个部分提供便利。
+          督察部作为图书馆协会坚强的后盾，尽职尽责的核查者，诚心诚意的服务者，努力给全校师生带来一个温馨、和谐的学习氛围，使图书馆的卫生、环境变得更加美好！
+        </p>
+        <br>
+        <p>
+          <h1>技术部</h1> 技术部是协会中最年轻的成员，工作包括：讲座等活动的录像与剪辑，协会官方网站的运营与维护等。技术部现已经汇聚了一部分擅长PS、录像、视频剪辑的技术性小能手，但由于协会未来将会推出自己的官方网站，所以特别欢迎专于网站制作或运营的同学们加入进来哦~
+        </p>
+        <br>
       </div>
       <div class="pageEnd"></div>
     </div>
-    <script>
-      "use strict";
-
-      (function () {
-
-        var target = document.querySelector(".target");
-        var links = document.querySelectorAll(".mynav a");
-        var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
-
-        function mouseenterFunc() {
-          if (!this.parentNode.classList.contains("active")) {
-            for (var i = 0; i < links.length; i++) {
-              if (links[i].parentNode.classList.contains("active")) {
-                links[i].parentNode.classList.remove("active");
-              }
-              links[i].style.opacity = "0.25";
-            }
-
-            this.parentNode.classList.add("active");
-            this.style.opacity = "1";
-
-            var width = this.getBoundingClientRect().width;
-            var height = this.getBoundingClientRect().height;
-            var left = this.getBoundingClientRect().left + window.pageXOffset;
-            var top = this.getBoundingClientRect().top + window.pageYOffset;
-            var color = colors[Math.floor(Math.random() * colors.length)];
-
-            target.style.width = width + "px";
-            target.style.height = height + "px";
-            target.style.left = left + "px";
-            target.style.top = top + "px";
-            target.style.borderColor = color;
-            target.style.transform = "none";
-          }
-        }
-
-        for (var i = 0; i < links.length; i++) {
-          links[i].addEventListener("mouseenter", mouseenterFunc);
-        }
-
-        function resizeFunc() {
-          var active = document.querySelector(".mynav li.active");
-
-          if (active) {
-            var left = active.getBoundingClientRect().left + window.pageXOffset;
-            var top = active.getBoundingClientRect().top + window.pageYOffset;
-
-            target.style.left = left + "px";
-            target.style.top = top + "px";
-          }
-        }
-
-        window.addEventListener("resize", resizeFunc);
-      })();</script>
   </div>
 </body>
 

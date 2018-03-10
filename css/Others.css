@@ -50,6 +50,9 @@
   .aboutusContent p{
     text-indent: 2em;
   }
+  .aboutusContent h1{
+    text-align: center;
+  }
   .pageEnd{
     background-image: url(../images/vers.png);
     width: 1178px;
@@ -76,14 +79,28 @@
     padding-left: 150px;
     text-align: left;
   }
-  .content{
-        width: auto;
-        height: auto;
-        background-color: rgb(255,255,255);
-        opacity: 0.675;
-        margin-top: 50px;
-        width: 1178px;
-        height:auto;
-	    float:left;
-        background-image: url(.././images/news_content_background.png)
+.content{
+    width: auto;
+    height: auto;
+    background-color: rgb(255,255,255);
+    width: 1178px;
+    height:auto;
+    float:left;
+    background-image: url(.././images/news_content_background.png)
   }
+.newsTextBox{
+    background-image: url(.././images/news_content_background.png);
+    width: 1178px;
+    height: auto;
+    float:left;
+}
+.Atest{
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.Atest h1{
+  text-align: center;
+}
+.Atest h2{
+  text-align: center;
+}
