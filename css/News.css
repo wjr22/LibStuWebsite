@@ -149,3 +149,23 @@ margin-left: 4px;
 .listpage{
   padding-left: 600px;
 }
+#AboutHref{
+  padding-top: 25px;
+}
+#AboutHref h1{
+  text-decoration-color: #F97879;
+  padding-left: 40px;
+}
+#AboutHref li{
+  line-height: 40px;
+  font-size: 20px;
+}
+#splendid{
+  padding-top: 20px;
+}
+#splendid h1{
+  padding-left: 40px;
+}
+#splendid li{
+  font-size: 20px;
+}

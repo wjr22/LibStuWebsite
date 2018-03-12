@@ -1,4 +1,9 @@
-<!doctype html>
+<?php
+if(!defined('InEmpireCMS'))
+{
+	exit();
+}
+?><!doctype html>
 <html>
 
 <head>
@@ -81,8 +86,8 @@
               </a>
             </div>
             <div class="introduction">
-              <br />
-              <p>
+             <br />
+ <p>
                 <h2>馆员日志</h2>
               </p>
               <p></p>
@@ -101,8 +106,7 @@
               </a>
             </div>
             <div class="introduction">
-              <br />
-              <p>
+              <br /><p>
                 <h2>规章制度</h2>
               </p>
               <p></p>
@@ -121,8 +125,7 @@
               </a>
             </div>
             <div class="introduction">
-              <br />
-              <p>
+              <br /><p>
                 <h2>关于我们</h2>
               </p>
               <p></p>
@@ -147,7 +150,14 @@
           <p></p>
         </div>
         <div class="newsIndex">
-          [e:loop={0,10,3,0,'','newstime DESC'}]
+          <?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(0,10,3,0,'','newstime DESC');
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
           <a href="<?=$bqsr['titleurl']?>" target="_blank">
             <u>
               <?=$bqr['title']?>
@@ -156,7 +166,10 @@
                 </small>
             </u>
           </a>
-          <br> [/e:loop]
+          <br> <?php
+}
+}
+?>
         </div>
       </div>
     </a>

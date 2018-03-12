@@ -1,4 +1,9 @@
-<!doctype html>
+<?php
+if(!defined('InEmpireCMS'))
+{
+	exit();
+}
+?><!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -41,7 +46,7 @@
           <div id="splendid">
             <h1>精彩推荐</h1>
             -------------------------------<br />
-[ecmsinfo]0,6,16,0,4,2,0,'','onclick DESC'[/ecmsinfo]
+<? @sys_GetEcmsInfo(0,6,16,0,4,2,0,'','onclick DESC');?>
           </div>
         </div>
         <div class="newsHrefBox">
